@@ -1,13 +1,12 @@
 from .base import *
 
-DEBUG = True
+
+DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1']
 
-INSTALLED_APPS += [
-    'debug_toolbar'
-]
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 
-MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
 
 # DEBUG TOOLBAR SETTINGS
 
@@ -37,7 +36,7 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'floyddipela',
         'USER': 'floyddipela',
         'PASSWORD': '',
