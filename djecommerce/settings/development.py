@@ -1,5 +1,6 @@
-from .base import *
-
+# from .base import *
+import os
+from decouple import config
 
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','rekamoreapp.herokuapp.com']
