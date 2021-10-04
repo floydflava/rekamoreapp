@@ -2,7 +2,7 @@ from .base import *
 
 
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1','rekamore.herokuapp.com']
 
 INSTALLED_APPS += [
@@ -41,9 +41,9 @@ DEBUG_TOOLBAR_CONFIG = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'floyddipela',
-#         'USER': 'floydflava',
-#         'PASSWORD': 'Floydfuckme-6',
-#         'HOST': '127.0.0.1',
+#         'USER': 'floyddipela',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
 #         'PORT': '5432',
 #     }
 # }

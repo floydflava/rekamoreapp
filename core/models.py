@@ -55,7 +55,9 @@ class Item(models.Model):
     description = models.TextField()
     image = models.ImageField()
     
-   
+    class Meta:
+        ordering = ['id']
+
     def __unicode__(self):
         return "{0}".format(self.image)
 
