@@ -17,7 +17,7 @@ DATABASES = {
         'NAME': config('floyddipela'),
         'USER': config('floydflava'),
         'PASSWORD': config('Floydfuckme-6'),
-        'HOST': config('localhost'),
+        'HOST': config('127.0.0.1'),
         'PORT': '5432'
     }
 }
