@@ -2,14 +2,16 @@ import os
 from decouple import config
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.crypto import get_random_string
+from configurations import Configuration, values
 
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
+class Base(Configuration):
+    SECRET_KEY = values.SecretValue()
 
-
-chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-SECRET_KEY = get_random_string(50, chars)
+# chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+# SECRET_KEY = get_random_string(50, chars)
 
 
 
