@@ -41,13 +41,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'floyddipela',
-        'USER': 'floyddipela',
-        'PASSWORD': '',
+        'USER': 'floydflava',
+        'PASSWORD': 'Floydfuckme-6',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-
 
 # DATABASES = {
 #     'default': {
