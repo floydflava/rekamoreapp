@@ -1,1 +1,1 @@
-web: gunicorn django-ecommerce-master 17-41-24-283.wsgi --log-file -
+web: gunicorn core.wsgi --log-file -
