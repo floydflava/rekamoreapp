@@ -2,7 +2,7 @@ from .base import *
 
 
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','rekamore.herokuapp.com']
 
 INSTALLED_APPS += [
@@ -41,8 +41,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'floyddipela',
-        'USER': 'floyddipela',
-        'PASSWORD': '',
+        'USER': 'floydflava',
+        'PASSWORD': 'Floydfuckme-6',
         'HOST': 'localhost',
         'PORT': '5432',
     }
