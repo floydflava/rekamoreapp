@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(
 
     # chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
     # SECRET_KEY = get_random_string(50, chars)
-SECRET_KEY = os.environ.get('SECRET')
+# SECRET_KEY = os.environ.get('SECRET')
 
 
 
