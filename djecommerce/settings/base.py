@@ -7,12 +7,12 @@ from configurations import Configuration, values
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
-class Base(Configuration):
-    SECRET_KEY = values.SecretValue()
+# class Base(Configuration):
+#     SECRET_KEY = values.SecretValue()
 
-    chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-    SECRET_KEY = get_random_string(50, chars)
-
+    # chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+    # SECRET_KEY = get_random_string(50, chars)
+SECRET_KEY = os.environ.get('SECRET')
 
 
 
