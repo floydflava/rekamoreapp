@@ -2,10 +2,10 @@ from .base import *
 
 
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','rekamore.herokuapp.com']
 
-SECRET_KEY = config('SECRET_KEY')
+
 
 INSTALLED_APPS += [
     'debug_toolbar'
