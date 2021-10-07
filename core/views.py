@@ -1,8 +1,8 @@
 import random
 import string
-
+import os
 import stripe
-from django.conf import Settings, settings
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -16,7 +16,8 @@ from django.db.models import Q
 from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm
 from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile
 
-stripe.api_key = settings.config['STRIPE_SECRET_KEY']
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+stripe.api_key = STRIPE_SECRET_KEY
 
 
 def create_ref_code():
