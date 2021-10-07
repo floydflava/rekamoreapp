@@ -1,6 +1,7 @@
 import os
 from decouple import config
 import django_heroku
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
@@ -56,6 +57,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djecommerce.wsgi.application'
+
+DATABASES = { 'default': dj_database_url.config() }
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

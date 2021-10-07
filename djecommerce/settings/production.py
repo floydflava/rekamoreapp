@@ -11,6 +11,8 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
 
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -29,5 +31,5 @@ DATABASES = {
     }
 }
 
-# STRIPE_PUBLIC_KEY = config('STRIPE_LIVE_PUBLIC_KEY')
-# STRIPE_SECRET_KEY = config('STRIPE_LIVE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = config('STRIPE_LIVE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = config('STRIPE_LIVE_SECRET_KEY')
