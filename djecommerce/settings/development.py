@@ -2,7 +2,7 @@ from .base import *
 
 
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1','rekamoreapp.herokuapp.com']
 
 
