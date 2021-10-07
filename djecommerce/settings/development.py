@@ -1,5 +1,5 @@
 from .base import *
-import django_heroku
+
 
 
 DEBUG = True
@@ -59,4 +59,3 @@ DATABASES = {
 
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
-django_heroku.settings(locals())
