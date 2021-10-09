@@ -3,7 +3,7 @@ from .base import *
 
 
 DEBUG = False
-ALLOWED_HOSTS = ['rekamoreapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','rekamoreapp.herokuapp.com']
 
 
 
@@ -31,8 +31,8 @@ ALLOWED_HOSTS = ['rekamoreapp.herokuapp.com']
 # ]
 
 
-def show_toolbar(request):
-    return True
+# def show_toolbar(request):
+#     return True
 
 
 # DEBUG_TOOLBAR_CONFIG = {
@@ -54,7 +54,7 @@ AUTH_PASSWORD_VALIDATORS = [
 #         'NAME': 'floyddipela',
 #         'USER': 'ibmvpyfmnzmqmn',
 #         'PASSWORD': '84b3fa85137b21f30d89023a0656b30752cc9d894d2b45574a5cf76e55e1e4ab',
-#         'HOST': 'ec2-100-24-169-249.compute-1.amazonaws.com',
+#         'HOST': 'localhost',
 #         'PORT': '5432',
 #     }
 # }
