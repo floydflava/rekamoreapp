@@ -2,7 +2,7 @@ from .base import *
 from decouple import config
 
 DEBUG = config('DEBUG')
-ALLOWED_HOSTS = ['ip-address', 'hevitall.herokuapp.com']
+ALLOWED_HOSTS = ['ip-address','0.0.0.0', 'hevitall.herokuapp.com']
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
