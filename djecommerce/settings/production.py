@@ -1,7 +1,7 @@
 from .base import *
 from decouple import config
 
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = config('DEBUG')
 ALLOWED_HOSTS = ['127.0.0.1', 'rekamoreapp.herokuapp.com']
 
 AUTH_PASSWORD_VALIDATORS = [
