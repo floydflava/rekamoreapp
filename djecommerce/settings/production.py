@@ -30,6 +30,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+django_heroku.settings(locals())
 STRIPE_PUBLIC_KEY = config('STRIPE_LIVE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_LIVE_SECRET_KEY')
