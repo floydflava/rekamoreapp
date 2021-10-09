@@ -50,22 +50,24 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'dbmm61hsigstip',
-#         'HOST': 'ec2-3-209-65-193.compute-1.amazonaws.com',
-#         'PORT': 5432,
-#         'USER': 'mbtuwudtrrrcuv',
-#         'PASSWORD': 'cabee50906b0678a588bb6361f47ffe403548893f30d3e119d47bafb2bc016ac'
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('dbmm61hsigstip'),
+        'USER': config('mbtuwudtrrrcuv'),
+        'PASSWORD': config('cabee50906b0678a588bb6361f47ffe403548893f30d3e119d47bafb2bc016ac'),
+        'HOST': config('ec2-3-209-65-193.compute-1.amazonaws.com'),
+        'PORT': '5432'
     }
 }
-django_heroku.settings(locals())
+DATABASES['default'] =  dj_database_url.config(default='postgres://mbtuwudtrrrcuv:cabee50906b0678a588bb6361f47ffe403548893f30d3e119d47bafb2bc016ac@ec2-3-209-65-193.compute-1.amazonaws.com:5432/dbmm61hsigstip')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
+django_heroku.settings(locals())
