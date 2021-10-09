@@ -13,16 +13,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('floyddipela'),
-#         'USER': config('floydflava'),
-#         'PASSWORD': config('Floydfuckme-6'),
-#         'HOST': config('127.0.0.1'),
-#         'PORT': '5432'
-#     }
-# }
 
 DATABASES = {
     'default': {
