@@ -40,6 +40,8 @@ ALLOWED_HOSTS = ['127.0.0.1','rekamoreapp.herokuapp.com']
 #     'SHOW_TOOLBAR_CALLBACK': show_toolbar
 # }
 
+
+
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},

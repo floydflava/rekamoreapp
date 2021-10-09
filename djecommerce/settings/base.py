@@ -55,6 +55,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'djecommerce.wsgi.application'
 
 DATABASES = { 'default': dj_database_url.config() }
