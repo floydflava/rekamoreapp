@@ -51,10 +51,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'floyddipela',
-#         'USER': 'ibmvpyfmnzmqmn',
-#         'PASSWORD': '84b3fa85137b21f30d89023a0656b30752cc9d894d2b45574a5cf76e55e1e4ab',
-#         'HOST': 'localhost',
+#         'NAME': config('floyddipela'),
+#         'USER': config('floyddipela'),
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
 #         'PORT': '5432',
 #     }
 # }
@@ -65,8 +65,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'].update(db_from_env)
 
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
