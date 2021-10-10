@@ -48,23 +48,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('floyddipela'),
-#         'USER': config('floyddipela'),
-#         'PASSWORD': '',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3db6vmt3idg58',
+        'USER': 'vuslunkabhcyvg',
+        'PASSWORD': 'e8ddc08d8e208678c1b87e887d85e1caeb5843542ce96dbb8f35a1c71414743c',
+        'HOST': 'ec2-54-208-96-16.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 # db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # DATABASES['default'].update(db_from_env)
 
