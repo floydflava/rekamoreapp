@@ -68,7 +68,7 @@ class Item(models.Model):
         super(Item, self).save()
         image = Image.open(self.image)
         (width, height) = image.size     
-        size = ( 500, 800)
+        size = ( 400, 400)
         image = image.resize(size, Image.ANTIALIAS)
         image.save(self.image.path)
 
