@@ -13,19 +13,19 @@ AUTH_PASSWORD_VALIDATORS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbtn7m6jn38nqt',
-        'USER': 'qndbsixuflnbup',
-        'PASSWORD': 'cf485536387b0ec4a458405ab8bf88ba0a201e26c6b299641e8f29dc4194447e',
-        'HOST': 'ec2-52-87-123-108.compute-1.amazonaws.com',
-        'POST': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_9c9d4095a655b98',
+        'USER': 'b93b0ad0a2825c',
+        'PASSWORD': '98a7f30e',
+        'HOST': 'us-cdbr-east-04.cleardb.com',
+        'POST': '3306',
     }
 }
 
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
+#         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
