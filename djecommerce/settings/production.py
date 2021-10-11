@@ -1,7 +1,7 @@
 from .base import *
 from decouple import config
 
-DEBUG = config('DEBUG')
+DEBUG = False
 ALLOWED_HOSTS = ['ip-address','0.0.0.0', 'hevitall.herokuapp.com']
 
 AUTH_PASSWORD_VALIDATORS = [
