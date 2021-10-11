@@ -30,19 +30,26 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'floyddipela',
+#         'USER': 'floyddipela',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'POST': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'floyddipela',
-        'USER': 'floyddipela',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'POST': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_9c9d4095a655b98',
+        'USER': 'b93b0ad0a2825c',
+        'PASSWORD': '98a7f30e',
+        'HOST': 'us-cdbr-east-04.cleardb.com',
+        'POST': '3306',
     }
 }
-# DATABASE_URL = 'postgres://vuslunkabhcyvg:e8ddc08d8e208678c1b87e887d85e1caeb5843542ce96dbb8f35a1c71414743c@ec2-54-208-96-16.compute-1.amazonaws.com:5432/d3db6vmt3idg58'
-# DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
-
 
 # DATABASES = {
 #     'default': {
