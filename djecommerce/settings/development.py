@@ -1,9 +1,11 @@
 from .base import *
 import dj_database_url
-
+import django_heroku
 
 DEBUG = False
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','hevitall.herokuapp.com']
+# ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','hevitall.herokuapp.com']
+ALLOWED_HOSTS = ['*']
+
 
 
 
@@ -29,6 +31,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
 
+DATABASES = {
+    'default': {dj_database_url.config()
+        
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -62,3 +69,4 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
+django_heroku.settings(locals())
