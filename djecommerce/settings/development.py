@@ -40,16 +40,16 @@ AUTH_PASSWORD_VALIDATORS = [
 #         'POST': '5432',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_9c9d4095a655b98',
-        'USER': 'b93b0ad0a2825c',
-        'PASSWORD': '98a7f30e',
-        'HOST': 'us-cdbr-east-04.cleardb.com',
-        'POST': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_9c9d4095a655b98',
+#         'USER': 'b93b0ad0a2825c',
+#         'PASSWORD': '98a7f30e',
+#         'HOST': 'us-cdbr-east-04.cleardb.com',
+#         'POST': '3306',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
