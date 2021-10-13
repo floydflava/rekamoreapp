@@ -3,6 +3,9 @@ from decouple import config
 import dj_database_url
 import django_heroku
 DEBUG = True
+
+
+
 ALLOWED_HOSTS = ['ip-address','0.0.0.0', 'hevitall.herokuapp.com']
 # ALLOWED_HOSTS = ['*']
 
@@ -13,7 +16,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.config(default="mysql://b39cb79fa33c24:fcbdfe31@us-cdbr-east-04.cleardb.com/heroku_c629df9e9cbd489?reconnect=true")
         
     }
 
