@@ -2,7 +2,7 @@ from .base import *
 import dj_database_url
 import django_heroku
 
-DEBUG = False
+DEBUG = True
 # ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','hevitall.herokuapp.com']
 ALLOWED_HOSTS = ['*']
 
@@ -31,21 +31,21 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
 
-DATABASES = {
-    'default': dj_database_url.config()
-        
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'floyddipela',
-#         'USER': 'floyddipela',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'POST': '5432',
-#     }
+#     'default': dj_database_url.config()
+        
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'floyddipela',
+        'USER': 'floyddipela',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'POST': '5432',
+    }
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
