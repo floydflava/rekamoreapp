@@ -15,22 +15,22 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
-DATABASES = {
-    'default': dj_database_url.config(default="mysql://b39cb79fa33c24:fcbdfe31@us-cdbr-east-04.cleardb.com/heroku_c629df9e9cbd489")
-        
-    }
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'heroku_9c9d4095a655b98',
-#         'USER': 'b93b0ad0a2825c',
-#         'PASSWORD': '98a7f30e',
-#         'HOST': 'us-cdbr-east-04.cleardb.com',
-#         'POST': '3306',
+#     'default': dj_database_url.config()
+        
 #     }
-# }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_c629df9e9cbd489',
+        'USER': 'b39cb79fa33c24',
+        'PASSWORD': 'fcbdfe31',
+        'HOST': 'us-cdbr-east-04.cleardb.com',
+        'POST': '',
+    }
+}
 
 
 # DATABASES = {
