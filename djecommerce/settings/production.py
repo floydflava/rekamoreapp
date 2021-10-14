@@ -28,7 +28,7 @@ DATABASES = {
         'USER': 'b39cb79fa33c24',
         'PASSWORD': 'fcbdfe31',
         'HOST': 'us-cdbr-east-04.cleardb.com',
-        'POST': '',
+        'POST': '3367',
     }
 }
 
