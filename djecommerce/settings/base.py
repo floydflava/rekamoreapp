@@ -21,7 +21,12 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'django_countries',
-    'core'
+    'core',
+
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+
 ]
 
 MIDDLEWARE = [
@@ -68,6 +73,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'himaac3ev',
+    'API_KEY': '138926243497758',
+    'API_SECRET': 'dttINWuISmDE1IxjFm6TZ4K526Y',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
