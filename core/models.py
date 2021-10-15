@@ -61,19 +61,18 @@ class Item(models.Model):
     def __unicode__(self):
         return "{0}".format(self.image)
 
-    
-    
-    
-    image = Image.open(image)
-    (width, height) = image.size     
-    size = ( 400, 400)
-    image = image.resize(size, Image.ANTIALIAS)
-    image.save(image,"JPEG",quality=90)
-
     def save(self):
         if not self.image:
             return            
-
+        else:
+            super(Item, self).save()
+            image_file = StringIO(self.image)
+            image = Image.open(self.image)
+            (width, height) = image.size     
+            size = ( 400, 400)
+            image = image.resize(size, Image.ANTIALIAS)
+            image_file = StringIO()
+            image.save(image_file,"JPEG",quality=90)
 
     def __str__(self):
         return self.title
