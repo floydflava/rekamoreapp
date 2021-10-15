@@ -10,7 +10,7 @@ from django.shortcuts import reverse
 from django_countries.fields import CountryField
 from PIL import Image
 import django_filters
-
+from io import StringIO
 
 CATEGORY_CHOICES = (
     ('S', 'Shirt'),
@@ -66,11 +66,13 @@ class Item(models.Model):
             return            
 
         super(Item, self).save()
+        image_file = StringIO(self.image)
         image = Image.open(self.image)
         (width, height) = image.size     
         size = ( 400, 400)
         image = image.resize(size, Image.ANTIALIAS)
-        image.save(self.image,"png",quality=90)
+        image_file = StringIO()
+        image.save(image_file,"JPEG",quality=90)
 
     def __str__(self):
         return self.title
