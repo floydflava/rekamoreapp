@@ -285,9 +285,9 @@ class Item(models.Model):
         super(Item, self).save()
         image = Image.open(self.image)
         (width, height) = image.size     
-        size = ( 400, 400)
+        size = ( 200, 200)
         image = image.resize(size, Image.ANTIALIAS)
-        image.save(self.image,"png",quality=90)
+        image.save(self.image,"png")
 
     def __str__(self):
         return self.title
