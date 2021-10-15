@@ -69,8 +69,8 @@ class Item(models.Model):
         image = Image.open(self.image)
         (width, height) = image.size     
         size = ( 400, 400)
-        image = image.resize(size, Image.ANTIALIAS)
-        image.save(self.image, 'png', quality=90)
+        myimage = image.resize(size, Image.ANTIALIAS)
+        image.save(myimage, 'png', quality=90)
 
     def __str__(self):
         return self.title
