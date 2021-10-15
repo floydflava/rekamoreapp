@@ -63,13 +63,12 @@ class Item(models.Model):
 
     
     
-    image_file = StringIO(image)
+    
     image = Image.open(image)
     (width, height) = image.size     
     size = ( 400, 400)
     image = image.resize(size, Image.ANTIALIAS)
-    image_file = StringIO()
-    image.save(image_file,"JPEG",quality=90)
+    image.save(image,"JPEG",quality=90)
 
     def save(self):
         if not self.image:
