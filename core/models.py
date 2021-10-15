@@ -73,6 +73,7 @@ class Item(models.Model):
             image = image.resize(size, Image.ANTIALIAS)
             image_file = StringIO()
             image.save(image_file,"JPEG",quality=90)
+            image_file = self.image
 
     def __str__(self):
         return self.title
