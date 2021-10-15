@@ -70,7 +70,7 @@ class Item(models.Model):
         (width, height) = image.size     
         size = ( 400, 400)
         image = image.resize(size, Image.ANTIALIAS)
-        image.save(self.config_file)
+        image.save(self)
 
     def __str__(self):
         return self.title
