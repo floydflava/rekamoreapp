@@ -1,7 +1,7 @@
 from .base import *
 from decouple import config
-import dj_database_url
 import django_heroku
+import dj_database_url
 DEBUG = True
 
 
@@ -15,22 +15,22 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
 ]
-# DATABASES = {
-#     'default': dj_database_url.config()
-        
-#     }
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_c629df9e9cbd489',
-        'USER': 'b39cb79fa33c24',
-        'PASSWORD': 'fcbdfe31',
-        'HOST': 'us-cdbr-east-04.cleardb.com',
-        'POST': '3367',
+    'default': dj_database_url.config()
+        
     }
-}
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_c629df9e9cbd489',
+#         'USER': 'b39cb79fa33c24',
+#         'PASSWORD': 'fcbdfe31',
+#         'HOST': 'us-cdbr-east-04.cleardb.com',
+#         'POST': '3367',
+#     }
+# }
 
 
 # DATABASES = {
